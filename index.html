@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaza Store — استضافة PS4</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+  var histlength = history.length;
+  history.go(-histlength + 2);
+</script>
+
+<div class="bg-fx"></div>
+
+<header class="hero">
+  <div class="hero-glow"></div>
+  <img class="logo" src="logo.jpg" alt="Zaza Store">
+  <p id="msgs" class="status">اختر إصدار الفيرموير الخاص بجهازك</p>
+</header>
+
+<main id="menu">
+
+  <div class="grid">
+    <a class="card" href="505goldhen/index.html" onmouseover="setMsg('استضافة GoldHEN لإصدار 5.05')" onmouseout="resetMsg()">
+      <span class="ver num">5.05</span>
+    </a>
+    <a class="card" href="505/index.html" onmouseover="setMsg('استضافة V2.5 لإصدار 5.05')" onmouseout="resetMsg()">
+      <span class="ver num">5.05</span>
+      <span class="tag">v2.5</span>
+    </a>
+    <a class="card" href="672goldhen/index.html" onmouseover="setMsg('استضافة GoldHEN لإصدار 6.72')" onmouseout="resetMsg()">
+      <span class="ver num">6.72</span>
+    </a>
+    <a class="card" href="672/index.html" onmouseover="setMsg('استضافة V3.0 لإصدار 6.72')" onmouseout="resetMsg()">
+      <span class="ver num">6.72</span>
+      <span class="tag">v3.0</span>
+    </a>
+    <a class="card" href="702/index.html" onmouseover="setMsg('استضافة V1.4 لإصدار 7.02')" onmouseout="resetMsg()">
+      <span class="ver num">7.02</span>
+      <span class="tag">v1.4</span>
+    </a>
+    <a class="card" href="75x/index.html" onmouseover="setMsg('استضافة V1.5 لإصدار 7.50 - 7.55')" onmouseout="resetMsg()">
+      <span class="ver num">7.50-7.55</span>
+      <span class="tag">v1.5</span>
+    </a>
+    <a class="card" href="g2all/index.html" onmouseover="setMsg('استضافة GoldHEN لإصدارات 7.00 - 13.00')" onmouseout="resetMsg()">
+      <span class="ver num">7.00-13.00</span>
+    </a>
+    <a class="card" href="900goldhen/index.html" onmouseover="setMsg('استضافة GoldHEN لإصدار 9.00')" onmouseout="resetMsg()">
+      <span class="ver num">9.00</span>
+    </a>
+    <a class="card" href="900v2/index.html" onmouseover="setMsg('استضافة V2.8 اليدوية لإصدار 9.00')" onmouseout="resetMsg()">
+      <span class="ver num">9.00</span>
+      <span class="tag">2.8 يدوي</span>
+    </a>
+    <a class="card" href="900v3/index.html" onmouseover="setMsg('استضافة V3.0 التلقائية لإصدار 9.00')" onmouseout="resetMsg()">
+      <span class="ver num">9.00</span>
+      <span class="tag">3.0</span>
+    </a>
+  </div>
+
+  <div class="actions">
+    <a class="btn-outline" href="restore/index.html" onmouseover="setMsg('استعادة الهوست لجهازك بدون DNS')" onmouseout="resetMsg()">استعادة الهوست</a>
+    <button class="btn-outline" type="button" onclick="donations()" onmouseover="setMsg('ادعم مطوّر الأداة الأصلية')" onmouseout="resetMsg()">دعم بعملة رقمية</button>
+  </div>
+
+</main>
+
+<section id="crypto">
+  <h2>دعم مطوّر الأداة الأصلية</h2>
+  <p class="crypto-note">العنوانين دي بتاعة GamerHack93، مطوّر الأداة الأصلية.</p>
+
+  <div class="coins">
+    <div class="coin">
+      <h3>Bitcoin <span class="num">(BTC)</span></h3>
+      <img src="btc.jpg" alt="عنوان BTC كرمز QR" width="150" height="150">
+      <button class="copy num" type="button" onclick="copyAddr(this,'bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm')">bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</button>
+    </div>
+    <div class="coin">
+      <h3>Ethereum <span class="num">(ETH)</span></h3>
+      <img src="eth.jpg" alt="عنوان ETH كرمز QR" width="150" height="150">
+      <button class="copy num" type="button" onclick="copyAddr(this,'0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c')">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</button>
+    </div>
+  </div>
+
+  <button class="btn-outline" type="button" onclick="load_menu()">رجوع</button>
+</section>
+
+<footer class="site-footer">
+  <div class="contact num">
+    <a href="https://wa.me/201007407067" target="_blank" rel="noopener">01007407067</a>
+    <a href="https://wa.me/201024686143" target="_blank" rel="noopener">01024686143</a>
+  </div>
+  <p class="credit">تصميم الواجهة: Zaza Store — الأداة الأساسية بواسطة <a class="signature" href="https://twitter.com/GamerHack93" target="_blank" rel="noopener">GamerHack93</a></p>
+</footer>
+
+<script>
+var msgs = document.getElementById('msgs');
+var defaultMsg = 'اختر إصدار الفيرموير الخاص بجهازك';
+
+function setMsg(t){ msgs.innerHTML = t; }
+function resetMsg(){ msgs.innerHTML = defaultMsg; }
+
+function donations(){
+  document.getElementById('crypto').className = 'show';
+  document.getElementById('menu').className = 'hide';
+}
+function load_menu(){
+  document.getElementById('crypto').className = '';
+  document.getElementById('menu').className = '';
+}
+
+function copyAddr(btn, text){
+  var original = btn.innerHTML;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function(){
+      btn.innerHTML = 'تم النسخ ✓';
+      setTimeout(function(){ btn.innerHTML = original; }, 1500);
+    });
+  }
+}
+</script>
+</body>
+</html>
